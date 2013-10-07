@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+DefaultLanguage en-US
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTPS} !=on
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
